@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <iframe src='./index.pdf' width='100%' height='1000px' id="mainweb" name="mainweb"  frameborder='1' onLoad="iFrameHeight()">
+
+    </iframe>
+</body>
+<script type="text/javascript" language="javascript">
+  function iFrameHeight() {
+  var ifm= document.getElementById("mainweb");
+  var subWeb = document.frames ? document.frames["mainweb"].document :
+  ifm.contentDocument;
+  if(ifm != null && subWeb != null) {
+  ifm.height = subWeb.body.scrollHeight;
+  }
+  }
+  </script>
+</html>
